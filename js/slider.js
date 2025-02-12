@@ -6,9 +6,6 @@ const nextButton = document.querySelector('.slider_arrow-right');
 
 let currentIndex = 0;
 const slidesCount = slides.length;
-
-
-
 // Рассчитываем количество видимых слайдов
 function getVisibleSlides() {
     if (window.innerWidth <= 600) return 1; // Мобильные устройства
