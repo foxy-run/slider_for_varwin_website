@@ -1,0 +1,104 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    margin: 0 auto;
+    overflow: hidden; /* Скрываем лишние части */
+    position: relative;
+    background-color: #eeecf4;
+
+}
+
+.slider_header {
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.slider_slider {
+    display: flex;
+    gap: 25px;  /* Расстояние между слайдами */
+    transition: transform 0.3s ease-in-out;
+    margin-top: 50px;
+}
+
+
+.slider_item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #420bb1;
+    border: 1px solid #ddd;
+    display: flex;
+    height: 350px;
+    padding: 20px 25px;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #5227CC 0%, #7749F8 100%);
+}
+
+/* Адаптивность – меняем процент ширины слайда */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .slider_item {
+        flex: 0 0 50%; /* Два слайда */
+    }
+}
+
+@media (min-width: 1025px) {
+    .slider_item {
+        flex: 0 0 33.333%; /* Три слайда */
+    }
+}
+
+
+.slider_arrows {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.slider_arrow-left,
+.slider_arrow-right {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.slider_arrow-left.active,
+.slider_arrow-right.active {
+    opacity: 1;
+}
+
+
+.slider_dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider_dot {
+    width: 11px;
+    height: 11px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider_dot.active {
+    background-color: #7749F8;
+}
