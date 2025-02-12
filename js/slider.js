@@ -7,7 +7,7 @@ const nextButton = document.querySelector('.slider_arrow-right');
 let currentIndex = 0;
 const slidesCount = slides.length;
 
-console.log(prevButton, nextButton);
+
 
 // Рассчитываем количество видимых слайдов
 function getVisibleSlides() {
