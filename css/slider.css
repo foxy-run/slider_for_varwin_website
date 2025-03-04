@@ -49,13 +49,13 @@ body {
 /* Адаптивность – меняем процент ширины слайда */
 @media (min-width: 601px) and (max-width: 1024px) {
     .slider_item {
-        flex: 0 0 50%; /* Два слайда */
+        flex: 0 0 calc((100% - 25px) / 2);
     }
 }
 
 @media (min-width: 1025px) {
     .slider_item {
-        flex: 0 0 33.333%; /* Три слайда */
+        flex: 0 0 calc((100% - 50px) / 3);
     }
 }
 
